@@ -16,12 +16,6 @@ http://livedemo00.template-help.com/wt_58887/
 
 TBD
 
-**Fecha de pago:**
-
-**Precio**
-
-**Tipo de Plan:**
-
 **Encargado:**
 
 * [Kenneth Betancourt](https://github.com/kennethb2405)
