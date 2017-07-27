@@ -6,7 +6,7 @@
 
 **Plantilla**:
 
-http://livedemo00.template-help.com/wt_58887/
+http://livedemo00.template-help.com/wt_58887/index.html
 
 **Fecha de inicio:**
 
