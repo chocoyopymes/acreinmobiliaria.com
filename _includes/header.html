@@ -1,0 +1,51 @@
+<!-- HEADER -->
+<header class="page-head">
+        <!-- RD Navbar Transparent-->
+        <div class="rd-navbar-wrap">
+          <nav data-lg-stick-up-offset="79px" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" class="rd-navbar rd-navbar-top-panel rd-navbar-light" data-lg-auto-height="true" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-stick-up="true">
+            <div class="container">
+              <div class="rd-navbar-inner">
+                <div class="rd-navbar-top-panel">
+                  <div class="left-side">
+                    <!--
+                    <ul class="rd-navbar-top-links list-unstyled">
+                      <li><a href="login.html" class="text-uppercase text-ubold"><small>Log in</small></a></li>
+                      <li><a href="login.html" class="text-uppercase text-ubold"><small>Register</small></a></li>
+                    </ul> -->
+                  </div>
+                  <div class="right-side">
+                    <address class="contact-info text-left"><span class="p"><span class="icon mdi mdi-email-open"></span><a href="mailto:#">{{ site.info.email }}</a></span><span class="p"><span class="icon mdi mdi-phone"></span><a href="callto:#">{{ site.info.phones.first.number }}</a></span></address>
+                  </div>
+                </div>
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap" class="rd-navbar-toggle"><span></span></button>
+                  <!-- RD Navbar Top Panel Toggle-->
+                  <button data-rd-navbar-toggle=".rd-navbar, .rd-navbar-top-panel" class="rd-navbar-top-panel-toggle"><span></span></button>
+                  <!--Navbar Brand-->
+                  <div class="rd-navbar-brand"><a href="{{ site.url }}"><img width='217' height='36' src='http://via.placeholder.com/217x36?text=logo+dark+217x36' alt=''/></a></div>
+                </div>
+                <div class="rd-navbar-menu-wrap">
+                  <div class="rd-navbar-nav-wrap">
+                    <div class="rd-navbar-mobile-scroll">
+                      <!--Navbar Brand Mobile-->
+                      <div class="rd-navbar-mobile-brand"><a href="index-2.html"><img width='217' height='36' src='http://via.placeholder.com/217x36?text=logo+dark+217x36' alt=''/></a></div>
+                      <!-- RD Navbar Nav-->
+                      <ul class="rd-navbar-nav">
+                        {% for item in site.data.menu %}
+                        <li {% if page.url == item.href %} class="active" {% endif %}>
+                          <a href="{{ site.url }}{{ item.href }}">
+                            <span>{{ item.name }}</span>
+                          </a>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>

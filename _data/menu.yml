@@ -1,0 +1,18 @@
+-
+  name: Home
+  href: '/'
+-
+  name: Catalog
+  href: '/catalog'
+-
+  name: Submit Property
+  href: '/submitproperty'
+-
+  name: Services
+  href: '/services'
+-
+  name: About
+  href: '/about'
+-
+  name: Contacs
+  href: '/contacts'

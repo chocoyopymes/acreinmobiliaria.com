@@ -1,0 +1,124 @@
+---
+title: Contacts
+layout: default
+permalink: "/contacts"
+---
+
+{% include page-header.html %}
+
+<!--Section Contact Info-->
+<section class="bg-lighter section-66">
+  <div class="shell-wide">
+    <div class="range range-xs-center text-sm-left">
+      <div class="cell-xs-10 cell-sm-8 cell-md-12">
+        <div class="range range-xs-center">
+          <div class="cell-xs-6 cell-md-3 cell-xl-2">
+            <div class="unit unit-spacing-xs unit-sm unit-sm-horizontal">
+              <div class="unit-left"><span style="font-size: 26px" class="icon icon-xs mdi mdi-phone text-primary"></span></div>
+              <div class="unit-body">
+                <h6>Phones</h6>
+                <div class="p">
+                  {% for item in site.info.phones %}
+                  <a class="reveal-block">{{ item.number }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell-xs-6 cell-md-3 cell-xl-2 offset-top-50 offset-xs-top-0">
+            <div class="unit unit-spacing-xs unit-sm unit-sm-horizontal">
+              <div class="unit-left"><span style="font-size: 26px" class="icon icon-xs mdi mdi-email-open text-primary"></span></div>
+              <div class="unit-body">
+                <h6>E-mail</h6>
+                <div class="p"><a class="reveal-block">{{ site.info.email }}</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="cell-xs-6 cell-md-3 cell-xl-2 offset-top-50 offset-md-top-0">
+            <div class="unit unit-spacing-xs unit-sm unit-sm-horizontal">
+              <div class="unit-left"><span style="font-size: 26px" class="icon icon-xs mdi mdi-map text-primary"></span></div>
+              <div class="unit-body">
+                <h6>Address</h6>
+                <address class="contact-info">{{ site.info.address }}</address>
+              </div>
+            </div>
+          </div>
+          <div class="cell-xs-6 cell-md-3 cell-xl-2 offset-top-50 offset-md-top-0">
+            <div class="unit unit-spacing-xs unit-sm unit-sm-horizontal">
+              <div class="unit-left"><span style="font-size: 26px" class="icon icon-xs mdi mdi-timelapse text-primary"></span></div>
+              <div class="unit-body">
+                <h6>Open Hours</h6>
+                {% for item in site.info.open_hours %}
+                <p>{{ item.hours }} - {{ item.days }}</p>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Section Get In Touch-->
+<section class="section-98 section-sm-110">
+  <div class="shell">
+    <h2 class="text-bold">Get In Touch</h2>
+    <hr class="divider bg-saffron">
+    <div class="offset-sm-top-66">
+      <div class="range range-xs-center">
+        <div class="cell-xs-10 cell-md-8">
+          <!-- RD Mailform-->
+          <form data-form-output="form-output-global" data-form-type="contact" method="post" action="http://cdn.livedemo00.template-help.com/wt_58887/bat/rd-mailform.php" class="rd-mailform text-left">
+            <div class="range range-xs-center">
+              <div class="cell-sm-6">
+                <div class="form-group">
+                  <label for="mailform-first-name" class="form-label">First name</label>
+                  <input id="mailform-first-name" type="text" name="name" data-constraints="@Required" class="form-control bg-white">
+                </div>
+              </div>
+              <div class="cell-sm-6">
+                <div class="form-group">
+                  <label for="mailform-last-name" class="form-label">Last Name</label>
+                  <input id="mailform-last-name" type="text" name="last-name" data-constraints="@Required" class="form-control bg-white">
+                </div>
+              </div>
+              <div class="cell-sm-6">
+                <div class="form-group offset-sm-top-30">
+                  <label for="mailform-phone" class="form-label">Phone</label>
+                  <input id="mailform-phone" type="text" name="phone" data-constraints="@Numeric @Required" class="form-control bg-white">
+                </div>
+              </div>
+              <div class="cell-sm-6">
+                <div class="form-group offset-sm-top-30">
+                  <label for="mailform-email" class="form-label">E-mail</label>
+                  <input id="mailform-email" type="email" name="email" data-constraints="@Email @Required" class="form-control bg-white">
+                </div>
+              </div>
+              <div class="cell-sm-12">
+                <div class="form-group offset-sm-top-30">
+                  <label for="mailform-message" class="form-label">Message</label>
+                  <textarea id="mailform-message" name="message" data-constraints="@Required" class="form-control bg-white"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="offset-top-24 text-center">
+              <button type="submit" class="btn btn-primary">send message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="rd-google-map">
+    <div id="rd-google-map" data-zoom='14' data-x='{{ site.info.lng }}' data-y='{{ site.info.lat }}' data-styles='[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.locality","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"simplified"},{"saturation":"-65"},{"lightness":"45"},{"gamma":"1.78"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"saturation":"-33"},{"lightness":"22"},{"gamma":"2.08"}]},{"featureType":"transit.station.airport","elementType":"geometry","stylers":[{"gamma":"2.08"},{"hue":"#ffa200"}]},{"featureType":"transit.station.airport","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.station.rail","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"transit.station.rail","elementType":"labels.icon","stylers":[{"visibility":"simplified"},{"saturation":"-55"},{"lightness":"-2"},{"gamma":"1.88"},{"hue":"#ffab00"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#bbd9e5"},{"visibility":"simplified"}]}]' class="rd-google-map__model-mod-1"></div>
+    <ul class="rd-google-map__locations">
+      <li data-x='{{ site.info.lng }}' data-y='{{ site.info.lat }}'>
+        <p>9870 St Vincent Place, Glasgow</p>
+      </li>
+    </ul>
+  </div>
+</section>

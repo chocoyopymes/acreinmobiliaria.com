@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: Acre inmobiliaria
 email: your-email@example.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -29,6 +29,23 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+# General info
+info:
+  logo: '/assets/images/logo.svg'
+  phones:
+    - number: '2222-2222'
+    - number: '8888-8888'
+  email: 'demo@acreinmobiliaria.com'
+  address: 'Managua, Nic. 1234'
+  open_hours:
+    - hours: '8:00 a.m. – 8:00 p.m.'
+      days: 'Lunes a Viernes'
+    - hours: '9:00 a.m. - 5:00 p.m.'
+      days: 'Sabados'
+  lat: '12.1359922'
+  lng: '-86.2685227'
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
