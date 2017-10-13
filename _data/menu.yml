@@ -5,9 +5,6 @@
   name: Catalog
   href: '/catalog'
 -
-  name: Submit Property
-  href: '/submitproperty'
--
   name: Services
   href: '/services'
 -
